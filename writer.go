@@ -626,6 +626,9 @@ func (p *MediaPlaylist) Encode() *bytes.Buffer {
 			}
 		}
 
+		if len(seg.Keys) == 0 {
+			seg.Keys = append(seg.Keys, &Key{Method: "NONE"})
+		}
 		for _, keyUrl := range seg.Keys {
 			if keyUrl != nil && !duplicateKey(lastSegKeyTags, keyUrl) {
 				p.buf.WriteString("#EXT-X-KEY:")

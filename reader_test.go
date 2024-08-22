@@ -389,7 +389,7 @@ func TestDecodeMediaPlaylistExtInfNonStrict2(t *testing.T) {
 	}
 }
 
-func TestMultipleKeyMediaPlaylist(t *testing.T) {
+func TestDecodeMediaPlaylistWithMutipleKeys(t *testing.T) {
 	widevineKeyUrl := "#EXT-X-KEY:METHOD=SAMPLE-AES,URI=\"data:text/plain;base64,AAAAXnBzc2gAAAAA7e+LqXnWSs6jyCfc1R0h7QAAAD4SEBBSVjox4aZ00Dl+oD7P7SMaDXdpZGV2aW5lX3Rlc3QiCDcxOTcwMTEzKgJTRDIAOJz1B0jzxombBlDqZw==\",KEYID=0x1052563a31e1a674d0397ea03ecfed23,KEYFORMAT=\"urn:uuid:edef8ba9-79d6-4ace-a3c8-27dcd51d21ed\",KEYFORMATVERSIONS=\"1\""
 	fpsKeyUrl := "#EXT-X-KEY:METHOD=SAMPLE-AES,URI=\"skd://ewogICAgImNvbnRlbnRfaWQiOiAiNzE5NzAxMTMiLAogICAgImtleV9pZCI6ICIxMDUyNTYzYTMxZTFhNjc0ZDAzOTdlYTAzZWNmZWQyMyIsCiAgICAiaXYiOiAiMjk0ZDM4NTgzYWE3NzgyMjI3OTgwYzQ4MTg3MDY3ODkiCn0K\",KEYFORMAT=\"com.apple.streamingkeydelivery\",KEYFORMATVERSIONS=\"1\""
 
@@ -886,6 +886,7 @@ func ExampleMediaPlaylist_DurationAsInt() {
 	// #EXT-X-VERSION:3
 	// #EXT-X-MEDIA-SEQUENCE:0
 	// #EXT-X-TARGETDURATION:10
+	// #EXT-X-KEY:METHOD=NONE
 	// #EXTINF:10,
 	// ad0.ts
 	// #EXTINF:8,

@@ -965,6 +965,7 @@ func ExampleMediaPlaylist_String() {
 	// #EXT-X-VERSION:3
 	// #EXT-X-MEDIA-SEQUENCE:0
 	// #EXT-X-TARGETDURATION:6
+	// #EXT-X-KEY:METHOD=NONE
 	// #EXTINF:5.000,
 	// test01.ts
 }
@@ -982,6 +983,7 @@ func ExampleMediaPlaylist_String_Winsize0() {
 	// #EXT-X-VERSION:3
 	// #EXT-X-MEDIA-SEQUENCE:0
 	// #EXT-X-TARGETDURATION:6
+	// #EXT-X-KEY:METHOD=NONE
 	// #EXTINF:5.000,
 	// test01.ts
 	// #EXTINF:6.000,
@@ -1002,6 +1004,7 @@ func ExampleMediaPlaylist_String_Winsize0_VOD() {
 	// #EXT-X-VERSION:3
 	// #EXT-X-MEDIA-SEQUENCE:0
 	// #EXT-X-TARGETDURATION:6
+	// #EXT-X-KEY:METHOD=NONE
 	// #EXTINF:5.000,
 	// test01.ts
 	// #EXTINF:6.000,
@@ -1059,6 +1062,7 @@ func ExampleMediaPlaylist_Segments_scte35_oatcls() {
 	// #EXT-X-TARGETDURATION:10
 	// #EXT-OATCLS-SCTE35:/DAlAAAAAAAAAP/wFAUAAAABf+/+ANgNkv4AFJlwAAEBAQAA5xULLA==
 	// #EXT-X-CUE-OUT:15
+	// #EXT-X-KEY:METHOD=NONE
 	// #EXTINF:8.844,
 	// media0.ts
 	// #EXT-X-CUE-OUT-CONT:ElapsedTime=8.844,Duration=15,SCTE35=/DAlAAAAAAAAAP/wFAUAAAABf+/+ANgNkv4AFJlwAAEBAQAA5xULLA==
@@ -1079,6 +1083,7 @@ func ExampleMediaPlaylist_Segments_scte35_67_2014() {
 	// #EXT-X-VERSION:3
 	// #EXT-X-MEDIA-SEQUENCE:0
 	// #EXT-X-TARGETDURATION:10
+	// #EXT-X-KEY:METHOD=NONE
 	// #EXTINF:10.000,
 	// media0.ts
 	// #EXTINF:10.000,
