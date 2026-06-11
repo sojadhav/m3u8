@@ -398,8 +398,10 @@ func TestDecodeMediaPlaylistWithMutipleKeys(t *testing.T) {
 	playlistStr.WriteString("#EXT-X-VERSION:8\n")
 	playlistStr.WriteString("#EXT-X-MEDIA-SEQUENCE:1\n")
 	playlistStr.WriteString("#EXT-X-TARGETDURATION:10\n")
-	playlistStr.WriteString(widevineKeyUrl + "\n")
-	playlistStr.WriteString(fpsKeyUrl + "\n")
+	playlistStr.WriteString(widevineKeyUrl)
+	playlistStr.WriteString("\n")
+	playlistStr.WriteString(fpsKeyUrl)
+	playlistStr.WriteString("\n")
 	playlistStr.WriteString("#EXT-X-PROGRAM-DATE-TIME:2012-05-28T02:30:00\n")
 	playlistStr.WriteString("#EXTINF:6,\n")
 	playlistStr.WriteString("filename1.cmfv\n")
@@ -410,8 +412,10 @@ func TestDecodeMediaPlaylistWithMutipleKeys(t *testing.T) {
 	playlistStr.WriteString("filename3.cmfv\n")
 	playlistStr.WriteString("#EXTINF:6,\n")
 	playlistStr.WriteString("filename4.cmfv\n")
-	playlistStr.WriteString(widevineKeyUrl + "\n")
-	playlistStr.WriteString(fpsKeyUrl + "\n")
+	playlistStr.WriteString(widevineKeyUrl)
+	playlistStr.WriteString("\n")
+	playlistStr.WriteString(fpsKeyUrl)
+	playlistStr.WriteString("\n")
 	playlistStr.WriteString("#EXTINF:6,\n")
 	playlistStr.WriteString("filename5.cmfv\n")
 
@@ -545,6 +549,7 @@ func TestFullTimeParse(t *testing.T) {
 		{"time_with_negative_zone_and_colon", "2006-01-02T15:04:05-01:00"},
 		{"time_with_negative_zone_no_colon", "2006-01-02T15:04:05-0100"},
 		{"time_with_negative_zone_2digits", "2006-01-02T15:04:05-01"},
+		{"time_with_utc_without_zone", "2006-01-02T15:04:05.123456789"},
 	}
 
 	var err error
